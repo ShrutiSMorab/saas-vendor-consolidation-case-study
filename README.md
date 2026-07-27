@@ -32,7 +32,7 @@ The centre of the repo is [`NEGOTIATION-STRATEGY.md`](NEGOTIATION-STRATEGY.md): 
 
 ## The problem in short
 
-$2.37M a year on four project-management tools that do broadly the same job. Around 180 people hold licences on two or more of them. Utilisation runs as low as 48% on one tool. Every contract was signed separately, so Meridian has never once negotiated as a single enterprise buyer.
+€2.37M a year on four project-management tools that do broadly the same job. Around 180 people hold licences on two or more of them. Utilisation runs as low as 48% on one tool. Every contract was signed separately, so Meridian has never once negotiated as a single enterprise buyer.
 
 ![Annual spend by tool](01_spend_by_vendor.png)
 
@@ -40,7 +40,7 @@ $2.37M a year on four project-management tools that do broadly the same job. Aro
 
 Keep Jira for Engineering, who will not and should not move. Standardise everyone else onto Asana. Retire Monday.com and Trello and rehome their users. Fix the rate and the terms at the Asana renewal, and put a flex-down clause in the contract so the idle-licence problem cannot rebuild.
 
-That takes annual spend from $2.37M to $1.76M, a saving of about $610K, or 26%. I report it as a range, $540K to $750K, because the number rests on a rate I have modelled rather than quoted.
+That takes annual spend from €2.37M to €1.76M, a saving of about €610K, or 26%. I report it as a range, €540K to €750K, because the number rests on a rate I have modelled rather than quoted.
 
 ![From current to end state](06_savings_waterfall.png)
 

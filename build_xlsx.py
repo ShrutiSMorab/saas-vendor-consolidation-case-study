@@ -17,7 +17,7 @@ key_fill = PatternFill("solid", fgColor="FFF3B0")
 tot_fill = PatternFill("solid", fgColor="EDF1F6")
 thin = Side(style="thin", color="D0D7DE")
 box = Border(left=thin, right=thin, top=thin, bottom=thin)
-CUR = '$#,##0;($#,##0);-'
+CUR = '€#,##0;(€#,##0);-'
 PCT = '0.0%'
 
 def style_header_row(ws, row, cols):
@@ -37,8 +37,8 @@ a["A2"] = "All current-state figures from the case brief. Blue cells are levers 
 a["A2"].font = NOTE
 a["A4"] = "Negotiation & scenario levers"; a["A4"].font = HEAD
 rows = [
-    ("Asana negotiated rate ($/seat/yr)", 1000, "input", "List is $1,200/seat. Base case assumes ~17% off on a 3-yr consolidated deal."),
-    ("Asana list rate ($/seat/yr)", 1200, "calc", "Derived: current Asana cost / purchased seats."),
+    ("Asana negotiated rate (€/seat/yr)", 1000, "input", "List is €1,200/seat. Base case assumes ~17% off on a 3-yr consolidated deal."),
+    ("Asana list rate (€/seat/yr)", 1200, "calc", "Derived: current Asana cost / purchased seats."),
     ("Users migrated off Monday.com + Trello", 350, "calc", "Monday.com active 230 + Trello active 120."),
     ("Of those, already hold Asana (overlap)", 150, "input", "SOFT ESTIMATE. Needs real licence-to-headcount mapping. See notes."),
     ("Jira right-sizing at renewal (%)", 0.0, "input", "Base case: 0%. Brief gives no Jira active count, so no cut is modelled."),
@@ -69,7 +69,7 @@ a.column_dimensions["C"].width = 66
 # ======================================================================
 c = wb.create_sheet("Current State")
 c["A1"] = "Current state — four PM platforms"; c["A1"].font = HEAD
-headers = ["Vendor","Purchased seats","Active users","Annual cost","List $/seat","$/active user","Idle seats","Utilisation"]
+headers = ["Vendor","Purchased seats","Active users","Annual cost","List €/seat","€/active user","Idle seats","Utilisation"]
 for i,h in enumerate(headers):
     col = chr(65+i); c[f"{col}2"] = h
 style_header_row(c, 2, [chr(65+i) for i in range(len(headers))])
@@ -99,7 +99,7 @@ c[f"B{tr}"] = f"=SUM(B3:B{r})"; c[f"B{tr}"].font = BOLD
 c[f"D{tr}"] = f"=SUM(D3:D{r})"; c[f"D{tr}"].font = BOLD; c[f"D{tr}"].number_format = CUR
 for col in "ABCDEFGH":
     c[f"{col}{tr}"].fill = tot_fill; c[f"{col}{tr}"].border = box
-c[f"A{tr+2}"] = "Microsoft Planner is bundled in the existing Microsoft 365 licence — $0 incremental, out of scope."
+c[f"A{tr+2}"] = "Microsoft Planner is bundled in the existing Microsoft 365 licence — €0 incremental, out of scope."
 c[f"A{tr+2}"].font = NOTE
 c["C3"].comment = Comment("Brief gives no active-user count for Jira. Flagged as a limitation.", "Shruti")
 widths = {"A":13,"B":15,"C":13,"D":13,"E":12,"F":13,"G":11,"H":12}
@@ -195,7 +195,7 @@ for i,h in enumerate(["Scenario","Asana rate","Jira cut","End-state spend","Annu
     sc[f"{chr(65+i)}3"] = h
 style_header_row(sc, 3, [chr(65+i) for i in range(6)])
 scen = [
-    ("Conservative", 1100, 0.0, "Weak Asana deal (−8%), Jira untouched. Matches the brief's ~$540K."),
+    ("Conservative", 1100, 0.0, "Weak Asana deal (−8%), Jira untouched. Matches the brief's ~€540K."),
     ("Base", 1000, 0.0, "3-yr consolidated deal (−17%), Jira untouched."),
     ("Optimistic", 950, 0.10, "Strong deal (−21%) + Jira right-sized 10% at its renewal."),
 ]
@@ -209,7 +209,7 @@ for name, rate, cut, note in scen:
     sc[f"E{rr}"] = f"='Current State'!D7-D{rr}"; sc[f"E{rr}"].number_format = CUR
     sc[f"F{rr}"] = f"=E{rr}/'Current State'!D7"; sc[f"F{rr}"].number_format = PCT
     for col in "ABCDEF": sc[f"{col}{rr}"].border = box
-sc[f"A{rr+2}"] = "Range headline: $540K (conservative) to $750K (optimistic); base case $610K."
+sc[f"A{rr+2}"] = "Range headline: €540K (conservative) to €750K (optimistic); base case €610K."
 sc[f"A{rr+2}"].font = NOTE
 for col,w in {"A":15,"B":12,"C":10,"D":16,"E":14,"F":10}.items(): sc.column_dimensions[col].width = w
 

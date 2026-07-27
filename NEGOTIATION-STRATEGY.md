@@ -2,7 +2,7 @@
 
 The savings are not in the spreadsheet. They are in the renewal calendar. Whoever controls the sequence controls the price.
 
-This is the part of the case that most people skip. It is easy to say "consolidate onto Asana and save $610K." It is harder to say how you actually get Asana to that price, in what order you touch the four contracts, and what you do when a vendor says no. That is what this file is for.
+This is the part of the case that most people skip. It is easy to say "consolidate onto Asana and save €610K." It is harder to say how you actually get Asana to that price, in what order you touch the four contracts, and what you do when a vendor says no. That is what this file is for.
 
 ## The calendar is the strategy
 
@@ -23,7 +23,7 @@ This is the deal that matters. Asana goes from 650 purchased seats to 710, absor
 
 ### What I know going in
 
-- Current list rate is $1,200 per seat per year (their $780,000 over 650 seats).
+- Current list rate is €1,200 per seat per year (their €780,000 over 650 seats).
 - I am increasing committed seats and committing for three years. Both are things Asana's sales team is compensated on. Expansion plus term is exactly the shape of deal they want to close.
 - Their quarter-end and their fiscal year-end are pressure points I would confirm and time the close against.
 
@@ -35,11 +35,11 @@ My walk-away alternative is real, which is what makes it useful. If Asana will n
 
 | | Rate per seat | On 710 seats |
 | --- | --- | --- |
-| Opening ask | $900 | $639,000 |
-| Target | $1,000 | $710,000 |
-| Walk-away (worst I accept) | $1,100 | $781,000 |
+| Opening ask | €900 | €639,000 |
+| Target | €1,000 | €710,000 |
+| Walk-away (worst I accept) | €1,100 | €781,000 |
 
-I open at $900 to anchor below target, expecting to settle around $1,000. If I cannot get under $1,100 I stop expanding and fall back to the BATNA, because above that line the consolidation stops paying for itself against the risk of putting everyone on one vendor.
+I open at €900 to anchor below target, expecting to settle around €1,000. If I cannot get under €1,100 I stop expanding and fall back to the BATNA, because above that line the consolidation stops paying for itself against the risk of putting everyone on one vendor.
 
 ### Concession ladder
 
@@ -71,4 +71,4 @@ The flex-down clause is where I would spend my last piece of leverage. Everythin
 
 ## Honest limits of this plan
 
-I have modelled the negotiated rate, not achieved it. The $1,000 target is a reasoned position from list price, deal shape and standard SaaS discounting on multi-year expansions, not a quote I have in writing. In a live deal the rate would move with how badly Asana wants the quarter, how real my Monday.com BATNA looks to them, and how disciplined I stay on the walk-away. The structure of the strategy holds regardless. The specific number is the part that only a real negotiation settles.
+I have modelled the negotiated rate, not achieved it. The €1,000 target is a reasoned position from list price, deal shape and standard SaaS discounting on multi-year expansions, not a quote I have in writing. In a live deal the rate would move with how badly Asana wants the quarter, how real my Monday.com BATNA looks to them, and how disciplined I stay on the walk-away. The structure of the strategy holds regardless. The specific number is the part that only a real negotiation settles.

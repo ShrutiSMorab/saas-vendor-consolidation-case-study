@@ -92,7 +92,7 @@ plt.rcParams.update({
 })
 
 def euro(x, _=None):
-    return f"${x/1000:,.0f}K"
+    return f"€{x/1000:,.0f}K"
 
 def save(fig, name):
     fig.tight_layout()
@@ -108,7 +108,7 @@ colors = [KEEP, ASANA, CUT, CUT]
 bars = ax.bar(vendors, costs, color=colors, width=0.62)
 for b, c in zip(bars, costs):
     ax.text(b.get_x()+b.get_width()/2, c+15000, euro(c), ha="center", fontsize=10.5, color=INK, fontweight="bold")
-ax.set_title("Annual spend by tool  ·  $2.37M across four PM platforms", fontsize=12.5, color=INK, pad=14, fontweight="bold", loc="left")
+ax.set_title("Annual spend by tool  ·  €2.37M across four PM platforms", fontsize=12.5, color=INK, pad=14, fontweight="bold", loc="left")
 ax.yaxis.set_major_formatter(FuncFormatter(euro))
 ax.set_ylim(0, 1_200_000)
 ax.grid(axis="y", color=GRID); ax.set_axisbelow(True)
@@ -126,10 +126,10 @@ for v in vendors:
 colors2 = [ASANA if v=="Asana" else CUT for v in cpau_v]
 bars = ax.bar(cpau_v, cpau, color=colors2, width=0.55)
 for b, c in zip(bars, cpau):
-    ax.text(b.get_x()+b.get_width()/2, c+25, f"${c:,.0f}", ha="center", fontsize=10.5, color=INK, fontweight="bold")
+    ax.text(b.get_x()+b.get_width()/2, c+25, f"€{c:,.0f}", ha="center", fontsize=10.5, color=INK, fontweight="bold")
 ax.set_title("Cost per active user  ·  the tools we pay most for, per real user, are the ones we retire",
              fontsize=11.5, color=INK, pad=14, fontweight="bold", loc="left")
-ax.set_ylabel("$/active user/yr")
+ax.set_ylabel("€/active user/yr")
 ax.set_ylim(0, 2200)
 ax.grid(axis="y", color=GRID); ax.set_axisbelow(True)
 for s in ["top","right"]: ax.spines[s].set_visible(False)
@@ -224,7 +224,7 @@ for i,(lab,val,kind) in enumerate(bridge):
         ax.plot([i-0.3, i+0.3+0.4],[running,running], color=SOFT, lw=0.7, ls="--", alpha=0.6)
 ax.set_xticks(range(len(labels)))
 ax.set_xticklabels(labels, fontsize=8.7)
-ax.set_title("From $2.37M to $1.76M  ·  each lever isolated, no double counting",
+ax.set_title("From €2.37M to €1.76M  ·  each lever isolated, no double counting",
              fontsize=12.5, color=INK, pad=14, fontweight="bold", loc="left")
 ax.yaxis.set_major_formatter(FuncFormatter(euro))
 ax.set_ylim(0, 2_600_000)
@@ -234,10 +234,10 @@ save(fig, "06_savings_waterfall.png")
 
 # ----------------------------------------------------------------------
 print("\n--- reconciliation ---")
-print(f"Current total:        ${CURRENT_TOTAL:,}")
-print(f"End-state total:      ${END_TOTAL:,}")
-print(f"Base savings:         ${BASE_SAVINGS:,}  ({BASE_SAVINGS/CURRENT_TOTAL:.1%})")
-print(f"Conservative:         ${CONS_SAVINGS:,.0f}")
-print(f"Optimistic:           ${OPT_SAVINGS:,.0f}")
+print(f"Current total:        €{CURRENT_TOTAL:,}")
+print(f"End-state total:      €{END_TOTAL:,}")
+print(f"Base savings:         €{BASE_SAVINGS:,}  ({BASE_SAVINGS/CURRENT_TOTAL:.1%})")
+print(f"Conservative:         €{CONS_SAVINGS:,.0f}")
+print(f"Optimistic:           €{OPT_SAVINGS:,.0f}")
 b = CURRENT_TOTAL + sum(x[1] for x in bridge[1:-1])
-print(f"Bridge reconciles to: ${b:,.0f}  (should equal end-state)")
+print(f"Bridge reconciles to: €{b:,.0f}  (should equal end-state)")

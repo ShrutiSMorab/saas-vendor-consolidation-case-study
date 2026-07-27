@@ -28,7 +28,7 @@ So the scorecard does not say "pick the highest score and standardise on it." It
 
 Monday.com at 3.20 is a competent middle. It does nothing badly, but it does not beat Asana on any weighted criterion, so on a consolidation play it loses to the tool that already has the largest active base.
 
-Trello at 2.25 is the clear retire. It is lightweight by design, which is fine as a free tier and hard to justify at $120,000 of Enterprise licensing when its 120 active users can be rehomed onto the standard tool.
+Trello at 2.25 is the clear retire. It is lightweight by design, which is fine as a free tier and hard to justify at €120,000 of Enterprise licensing when its 120 active users can be rehomed onto the standard tool.
 
 ## What I would add before signing anything
 
